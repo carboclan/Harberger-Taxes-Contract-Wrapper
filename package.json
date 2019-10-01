@@ -1,0 +1,27 @@
+{
+  "name": "@carboclan/harberger-taxes-contract-wrapper",
+  "version": "0.0.1",
+  "description": "contract wrapper for harberger-taxes-contract",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run generate_contract_wrappers && tsc -b",
+    "generate_contract_wrappers": "abi-gen --abis ./build/contracts/**/*.json --template node_modules/@0x/abi-gen-templates/contract.handlebars --partials 'node_modules/@0x/abi-gen-templates/partials/**/*.handlebars' --output src/generated-wrappers --backend ethers"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carboclan/Harberger-Taxes-Contract-Wrapper.git"
+  },
+  "author": "Tal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/carboclan/Harberger-Taxes-Contract-Wrapper/issues"
+  },
+  "homepage": "https://github.com/carboclan/Harberger-Taxes-Contract-Wrapper#readme",
+  "dependencies": {
+    "@0x/base-contract": "~5.3.2"
+  },
+  "devDependencies": {
+    "@0x/abi-gen": "^4.2.1",
+    "@0x/abi-gen-templates": "^2.4.2"
+  }
+}
