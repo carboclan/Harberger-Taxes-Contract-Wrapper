@@ -5,10 +5,11 @@
     "lib": ["es2017", "dom"],
     "outDir": "lib",
     "rootDir": ".",
+    "resolveJsonModule": true,
     "composite": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./build/contracts/*.json","./src/**/*"]
 }
