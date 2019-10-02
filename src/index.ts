@@ -4,11 +4,11 @@ import { AABoardContract, AABoardEvents } from './generated-wrappers/AABoard';
 
 export { AABoardEvents };
 
-export async function getAABoardWrapper(ethereum) {
-  const web3Wrapper = new Web3Wrapper(ethereum);
+export async function getAABoardWrapper(provider) {
+  const web3Wrapper = new Web3Wrapper(provider);
   const networkId = await web3Wrapper.getNetworkIdAsync();
   const network = networks[networkId];
   const address = network.address;
 
-  return new AABoardContract(address, ethereum);
+  return new AABoardContract(address, provider);
 }
