@@ -11,5 +11,5 @@
     "declarationMap": true,
     "sourceMap": true
   },
-  "include": ["./build/contracts/*.json","./src/**/*"]
+  "include": ["./build/networks/*.json","./src/**/*"]
 }
