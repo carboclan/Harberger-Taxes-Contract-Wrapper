@@ -1,6 +1,6 @@
 {
   "name": "@carboclan/harberger-taxes-contract-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "contract wrapper for harberger-taxes-contract",
   "main": "lib/src/index.js",
   "scripts": {

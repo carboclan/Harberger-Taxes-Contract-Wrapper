@@ -8,7 +8,7 @@ export async function getAABoardWrapper(provider) {
   const web3Wrapper = new Web3Wrapper(provider);
   const networkId = await web3Wrapper.getNetworkIdAsync();
   const network = networks[networkId];
-  const address = network.address;
+  const address = network.address.toLowerCase();
 
   return new AABoardContract(address, provider);
 }
