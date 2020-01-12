@@ -5,7 +5,7 @@
   "main": "lib/src/index.js",
   "scripts": {
     "build": "npm run generate_contract_wrappers && tsc -b",
-    "generate_contract_wrappers": "abi-gen --abis ./build/contracts/**/*.json --template node_modules/@0x/abi-gen-templates/contract.handlebars --partials 'node_modules/@0x/abi-gen-templates/partials/**/*.handlebars' --output src/generated-wrappers --backend ethers && mv src/generated-wrappers/a_a_board.ts src/generated-wrappers/AABoard.ts"
+    "generate_contract_wrappers": "abi-gen --abis ./build/contracts/**/*.json --template node_modules/@0x/abi-gen/templates/TypeScript/contract.handlebars --partials 'node_modules/@0x/abi-gen/templates/TypeScript/partials/**/*.handlebars' --output src/generated-wrappers --backend ethers && mv src/generated-wrappers/a_a_board.ts src/generated-wrappers/AABoard.ts"
   },
   "repository": {
     "type": "git",
@@ -18,10 +18,11 @@
   },
   "homepage": "https://github.com/carboclan/Harberger-Taxes-Contract-Wrapper#readme",
   "dependencies": {
-    "@0x/base-contract": "~5.3.2"
+    "@0x/base-contract": "^6.0.3",
+    "ethers": "<=4.0.42"
   },
   "devDependencies": {
-    "@0x/abi-gen": "^4.2.1",
-    "@0x/abi-gen-templates": "^2.4.2"
+    "@0x/abi-gen": "^5.0.3",
+    "typescript": "^3.7.4"
   }
 }
